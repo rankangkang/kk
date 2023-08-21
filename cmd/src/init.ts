@@ -13,13 +13,21 @@ const questions: prompts.PromptObject[] = [
     message: 'select a template to start',
     choices: [
       {
-        title: 'nodejs',
-        value: 'nodejs'
+        title: 'ts html app',
+        value: 'ts-html-app'
       },
       {
-        title: 'web',
-        value: 'web'
-      }
+        title: 'ejected react app',
+        value: 'ejected-react-app'
+      },
+      {
+        title: 'rewired react app',
+        value: 'rewired-react-app'
+      },
+      {
+        title: 'webpack react app',
+        value: 'webpack-react-app'
+      },
     ]
   }
 ]

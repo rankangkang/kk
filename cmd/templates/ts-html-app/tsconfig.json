@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["esnext", "dom"],
+    "jsx": "react",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    // tsc -w 编译输出出口
+    "outDir": "build",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src", "*.d.ts"]
+}

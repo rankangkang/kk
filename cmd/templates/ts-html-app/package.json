@@ -1,0 +1,17 @@
+{
+  "name": "react-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node ./server.js"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.3",
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}
