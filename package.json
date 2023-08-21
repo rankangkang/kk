@@ -1,0 +1,36 @@
+{
+  "name": "@cmkk/kk-cli",
+  "version": "0.0.1",
+  "description": "kk cli",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "create-vue": "outfile.cjs"
+  },
+  "files": [
+    "outfile.cjs",
+    "templates"
+  ],
+  "engines": {
+    "node": ">=v16.20.0"
+  },
+  "scripts": {},
+  "keywords": [],
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.0",
+    "@types/eslint": "^8.44.2",
+    "@types/node": "^18.17.5",
+    "@types/prompts": "^2.4.4",
+    "@vue/create-eslint-config": "^0.3.1",
+    "@vue/tsconfig": "^0.4.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.2"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json}": [
+      "prettier --write"
+    ]
+  }
+}
