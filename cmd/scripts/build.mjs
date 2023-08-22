@@ -6,7 +6,7 @@ await esbuild.build({
   outfile: 'bin/index.cjs',
   format: 'cjs',
   platform: 'node',
-  target: 'node16',
+  target: 'node14',
   plugins: [
     {
       name: 'alias',

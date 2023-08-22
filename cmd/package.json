@@ -16,11 +16,7 @@
   "scripts": {
     "format": "prettier --write .",
     "prebuild": "rimraf bin",
-    "build": "zx ./scripts/build.mjs",
-    "snapshot": "zx ./scripts/snapshot.mjs",
-    "pretest": "run-s build snapshot",
-    "test": "zx ./scripts/test.mjs",
-    "prepublishOnly": "zx ./scripts/prepublish.mjs"
+    "build": "zx ./scripts/build.mjs"
   },
   "repository": {
     "type": "git",
