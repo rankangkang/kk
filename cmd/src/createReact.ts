@@ -1,14 +1,10 @@
 import prompts from 'prompts'
 import path from 'node:path'
 import createDebug from 'debug'
-import { fileURLToPath } from 'node:url'
 import chalk from 'chalk'
 import { dirExist, copyDir } from './utils/file.js'
 import { injectPackageJson } from './utils/json.js'
 import { reactTemplates } from './config/index.js'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
 
 const debug = createDebug('cmd:init')
 
@@ -34,7 +30,9 @@ export default async function createReact(...args: any[]) {
 
 // 未传递参数，直接创建，让用户选择参数
 export async function create() {
+  console.log()
   const { project, template } = await prompts(questions)
+  console.log()
   await createWithArgs(project, template)
 }
 
@@ -62,6 +60,15 @@ export async function createWithArgs(project: string, template: string) {
 
   await injectPackageJson(outputDir, { name: project })
   console.log(chalk.green('✔ 包名注入成功'))
-
-  console.log(chalk.green('😄 模板创建成功'))
+  console.log()
+  console.log(chalk.greenBright('✅ success!'))
+  console.log()
+  console.log(chalk.greenBright('🚀 Ready to code!'))
+  console.log(chalk.blueBright(`
+👉 cd ${project}
+👉 npm i
+👉 npm run start
+  `
+  ))
+  console.log()
 }
