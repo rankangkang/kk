@@ -1,4 +1,4 @@
 packages:
   - 'cmd'
-  - 'cmd/templates/*'
+  # - 'cmd/templates/*'
   - 'examples/*'

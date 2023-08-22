@@ -12,8 +12,8 @@ export default defineConfig({
   build: {
     sourcemap: false,
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
-      name: '@cmkk/flux',
+      entry: path.resolve(__dirname, './src/index.ts'),
+      name: '@cmkk/kk',
       formats: ['cjs'],
       fileName: (format) => `kk.js`,
     },

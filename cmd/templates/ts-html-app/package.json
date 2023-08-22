@@ -1,9 +1,8 @@
 {
-  "name": "react-template",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
   "scripts": {
+    "predev": "tsc --watch",
     "dev": "node ./server.js"
   },
   "devDependencies": {

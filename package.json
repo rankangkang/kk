@@ -4,13 +4,6 @@
   "description": "kk cli",
   "private": true,
   "type": "module",
-  "bin": {
-    "create-vue": "outfile.cjs"
-  },
-  "files": [
-    "outfile.cjs",
-    "templates"
-  ],
   "engines": {
     "node": ">=v16.20.0"
   },
