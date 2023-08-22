@@ -6,6 +6,7 @@ import path from 'node:path'
 import chalk from 'chalk'
 import { Command } from 'commander'
 import creatReact from './createReact.js'
+import creatLib from './createLib.js'
 
 // const { default: pkg } = await import('../package.json', { assert: { type: 'json' } })
 const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json')).toString())
@@ -31,6 +32,10 @@ create template of different types, eg:
   .action(async (type) => {
     if (type === 'react') {
       return await creatReact()
+    }
+
+    if (type === 'lib') {
+      return await creatLib()
     }
 
     console.log(chalk.yellow('📢 没有匹配的指令'))

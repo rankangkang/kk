@@ -1,0 +1,28 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepublish": "pnpm run build",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/es/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/es/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  }
+}
