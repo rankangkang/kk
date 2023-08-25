@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/create-vue.git"
+    "url": "git+https://github.com/rankangkang/kk.git"
   },
   "keywords": [],
   "devDependencies": {
@@ -43,7 +43,7 @@
     "zx": "^7.2.3"
   },
   "lint-staged": {
-    "*.{js,ts,vue,json}": [
+    "*.{js,ts,json}": [
       "prettier --write"
     ]
   },
