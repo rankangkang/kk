@@ -16,11 +16,11 @@ await esbuild.build({
           const result = await resolve('prompts/lib/index.js', {
             importer,
             resolveDir,
-            kind: 'import-statement'
+            kind: 'import-statement',
           })
           return result
         })
-      }
+      },
     },
-  ]
+  ],
 })
