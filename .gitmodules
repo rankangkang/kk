@@ -1,0 +1,9 @@
+[submodule "templates/node-lib-starter"]
+	path = templates/node-lib-starter
+	url = https://github.com/rankangkang/node-lib-starter.git
+[submodule "templates/ts-monorepo-starter"]
+	path = templates/ts-monorepo-starter
+	url = https://github.com/rankangkang/ts-monorepo-starter.git
+[submodule "templates/web-lib-starter"]
+	path = templates/web-lib-starter
+	url = https://github.com/rankangkang/web-lib-starter.git
