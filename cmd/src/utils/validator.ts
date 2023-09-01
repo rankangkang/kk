@@ -1,9 +1,9 @@
 export function validString(val: any) {
-  if (typeof val !== 'string') {
-    return false
+  if (typeof val !== "string") {
+    return false;
   }
   if (val.trim().length === 0) {
-    return false
+    return false;
   }
-  return true
+  return true;
 }
