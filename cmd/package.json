@@ -4,7 +4,8 @@
   "description": "kk cli",
   "type": "module",
   "bin": {
-    "kk": "./bin/index.cjs"
+    "kk": "./bin/index.cjs",
+    "create-kk": "./bin/index.cjs"
   },
   "files": [
     "bin",

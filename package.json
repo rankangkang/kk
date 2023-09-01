@@ -1,8 +1,7 @@
 {
-  "name": "@cmkk/kk-cli",
+  "name": "create-kk",
   "version": "0.0.1",
   "description": "kk cli",
-  "private": true,
   "type": "module",
   "engines": {
     "node": ">=v16.20.0"
@@ -10,6 +9,8 @@
   "scripts": {},
   "keywords": [],
   "devDependencies": {
+    "@cmkk/eslint-config-lib": "^0.0.2",
+    "@cmkk/prettier-config": "^0.0.2",
     "@tsconfig/node18": "^18.2.0",
     "@types/eslint": "^8.44.2",
     "@types/node": "^18.17.5",
