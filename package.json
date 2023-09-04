@@ -7,7 +7,9 @@
   "scripts": {
     "prepare": "husky install",
     "pretty": "prettier --write \"**/*.{md,json}\"",
-    "lint": "eslint . --fix --ext .ts,.js,.mjs"
+    "lint": "eslint . --fix --ext .ts,.js,.mjs",
+    "prerelease": "bumpp -r",
+    "release": "pnpm --filter create-kk publish -- --dry-run"
   },
   "lint-staged": {
     "*.{js,jsx,cjs,mjs,ts,tsx,mts}": [
@@ -27,6 +29,7 @@
     "@types/prompts": "^2.4.4",
     "@vue/create-eslint-config": "^0.3.1",
     "@vue/tsconfig": "^0.4.0",
+    "bumpp": "^9.2.0",
     "commitlint": "^17.7.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.0",

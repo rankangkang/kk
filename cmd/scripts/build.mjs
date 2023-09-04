@@ -61,3 +61,6 @@ await esbuild.build({
     },
   ],
 })
+
+console.log(chalk.green('✔ 编译成功'))
+console.log()

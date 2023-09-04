@@ -5,7 +5,7 @@ export async function injectPackageJson(dir: string, obj2Inject: Record<string, 
   const pkgJsonPath = path.resolve(dir, 'package.json')
   let content = (await fs.readFile(pkgJsonPath)).toString()
   let jsonObj = JSON.parse(content)
-  jsonObj = Object.assign({}, { ...obj2Inject }, jsonObj)
+  jsonObj = Object.assign({}, jsonObj, { ...obj2Inject })
   content = JSON.stringify(jsonObj, null, '  ')
   await fs.writeFile(pkgJsonPath, Buffer.from(content))
 }

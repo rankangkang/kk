@@ -22,7 +22,7 @@ await fs.mkdirp(targetDir)
 cd(sourceDir)
 
 const sp1 = ora('从 github 拉取模板代码')
-sp1.start('拉取中')
+sp1.start('拉取中...\n')
 
 // 拉取所有代码
 await $`git submodule update --init --recursive`
