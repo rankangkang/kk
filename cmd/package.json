@@ -1,5 +1,5 @@
 {
-  "name": "kk",
+  "name": "create-kk",
   "version": "0.0.1",
   "description": "kk cli",
   "keywords": [],
@@ -10,7 +10,7 @@
   "type": "module",
   "bin": {
     "create-kk": "./bin/index.cjs",
-    "kk": "./bin/kk.cjs"
+    "kk": "./bin/index.cjs"
   },
   "files": [
     "bin",
@@ -21,7 +21,7 @@
     "prebuild": "rimraf bin",
     "build": "zx ./scripts/build.mjs",
     "copy": "zx ./scripts/copyTemplate.mjs",
-    "prepublishOnly": ""
+    "prepublishOnly": "npm run build && npm run copy"
   },
   "lint-staged": {
     "*.{js,ts,json}": [
