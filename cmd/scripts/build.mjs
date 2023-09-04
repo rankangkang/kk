@@ -2,8 +2,8 @@ import * as esbuild from 'esbuild'
 
 await esbuild.build({
   bundle: true,
-  entryPoints: ['src/index.ts'],
-  outfile: 'bin/index.cjs',
+  entryPoints: ['src/kk.ts'],
+  outfile: 'bin/kk.cjs',
   format: 'cjs',
   platform: 'node',
   target: 'node14',

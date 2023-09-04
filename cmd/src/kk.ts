@@ -7,10 +7,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import chalk from 'chalk'
 import { Command } from 'commander'
-import creatReact from './createReact.js'
-import creatLib from './createLib.js'
+import createStarter from './createStarter.js'
 
-// const { default: pkg } = await import('../package.json', { assert: { type: 'json' } })
 const pkg = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json')).toString())
 
 const program = new Command()
@@ -21,7 +19,7 @@ program
   .version(pkg.version, '-v, --version')
 
 program
-  .command('create <type>')
+  .command('create')
   .description(
     `
 create template of different types, eg:
@@ -31,22 +29,21 @@ create template of different types, eg:
 ...
   `,
   )
-  .action(async (type) => {
-    if (type === 'react') {
-      return await creatReact()
-    }
-
-    if (type === 'lib') {
-      return await creatLib()
-    }
-
-    console.log(chalk.yellow('📢 没有匹配的指令'))
-    console.log()
+  // -t 参数，目前只有starter模板，故注释掉
+  // .option('-t --type [type]', 'type to create', 'starter')
+  .action(async (args) => {
+    // create others
+    await createStarter()
   })
 
-program.parse()
+program.parse(process.argv)
 
 process.on('SIGINT', () => {
+  console.log(chalk.greenBright('👋 bye bye ~'))
+  process.exit(0)
+})
+
+process.on('SIGTERM', () => {
   console.log(chalk.greenBright('👋 bye bye ~'))
   process.exit(0)
 })

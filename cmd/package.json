@@ -10,7 +10,7 @@
   "type": "module",
   "bin": {
     "create-kk": "./bin/index.cjs",
-    "kk": "./bin/index.cjs"
+    "kk": "./bin/kk.cjs"
   },
   "files": [
     "bin",
@@ -20,7 +20,8 @@
     "format": "prettier --write .",
     "prebuild": "rimraf bin",
     "build": "zx ./scripts/build.mjs",
-    "copy": "zx ./scripts/copyTemplate.mjs"
+    "copy": "zx ./scripts/copyTemplate.mjs",
+    "prepublishOnly": ""
   },
   "lint-staged": {
     "*.{js,ts,json}": [
