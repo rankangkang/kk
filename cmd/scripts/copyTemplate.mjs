@@ -16,13 +16,13 @@ const targetDir = path.resolve(__dirname, '..', 'template')
 console.log('👉 source dir:', sourceDir)
 console.log('👉 target dir:', targetDir)
 
-await fs.rm(targetDir, { recursive: true })
+await $`npx rimraf ${targetDir}`
 await fs.mkdirp(targetDir)
 
 cd(sourceDir)
 
 const sp1 = ora('从 github 拉取模板代码')
-sp1.start('开始拉取')
+sp1.start('拉取中')
 
 // 拉取所有代码
 await $`git submodule update --init --recursive`
