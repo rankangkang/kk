@@ -1,6 +1,6 @@
 {
   "name": "kk",
-  "version": "0.0.2-beta.0",
+  "version": "0.0.2",
   "description": "kk cli",
   "keywords": [],
   "type": "module",
@@ -12,7 +12,7 @@
     "prepare": "husky install",
     "pretty": "prettier --write \"**/*.{md,json}\"",
     "lint": "eslint . --fix --ext .ts,.js,.mjs",
-    "release": "bumpp -r && pnpm --filter create-kk publish"
+    "release": "bumpp package.json cmd/package.json examples/* && pnpm --filter create-kk publish --dry-run"
   },
   "lint-staged": {
     "*.{js,jsx,cjs,mjs,ts,tsx,mts}": [
