@@ -4,12 +4,15 @@
   "description": "kk cli",
   "keywords": [],
   "type": "module",
+  "workspaces": [
+    "cmd",
+    "examples/*"
+  ],
   "scripts": {
     "prepare": "husky install",
     "pretty": "prettier --write \"**/*.{md,json}\"",
     "lint": "eslint . --fix --ext .ts,.js,.mjs",
-    "prerelease": "bumpp -r",
-    "release": "pnpm --filter create-kk publish -- --dry-run"
+    "release": "bumpp -r && pnpm --filter create-kk publish -- --dry-run"
   },
   "lint-staged": {
     "*.{js,jsx,cjs,mjs,ts,tsx,mts}": [
