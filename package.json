@@ -12,7 +12,8 @@
     "prepare": "husky install",
     "pretty": "prettier --write \"**/*.{md,json}\"",
     "lint": "eslint . --fix --ext .ts,.js,.mjs",
-    "release": "bumpp package.json cmd/package.json examples/* && pnpm --filter create-kk publish --dry-run"
+    "release:test": "pnpm --filter create-kk publish -- --dry-run",
+    "release": "bumpp package.json cmd/package.json && pnpm --filter create-kk publish"
   },
   "lint-staged": {
     "*.{js,jsx,cjs,mjs,ts,tsx,mts}": [
