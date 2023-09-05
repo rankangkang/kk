@@ -8,8 +8,5 @@
     "paths": {
       "@/*": ["src/*"]
     }
-  },
-  "ts-node": {
-    "esm": true
   }
 }
