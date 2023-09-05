@@ -2,4 +2,5 @@
 **/dist
 **/bin
 **/coverage
-templates
+templates/**
+**/template

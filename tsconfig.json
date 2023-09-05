@@ -1,6 +1,6 @@
 {
   "extends": "@tsconfig/node18/tsconfig.json",
-  "include": ["cmd/src/index.ts", "cmd/src/utils/**/*"],
+  "include": ["cmd/src"],
   "compilerOptions": {
     "strict": false,
     "resolveJsonModule": true
